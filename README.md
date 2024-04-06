@@ -1,4 +1,4 @@
-## Scss-base-2024
+## Projekt Portfolio
 
 ## Development
 ``sass --watch src/scss/style.scss style.css``

@@ -1,0 +1,15 @@
+.hero,
+.showcase,
+.projects,
+.stack {
+    display: grid;
+    grid-template-columns: var(--grid-container);
+    padding: var(--section-padding) 0;
+}
+
+.hero__inner,
+.showcase__inner,
+.projects__inner,
+.stack__inner {
+    grid-column: inner;
+}

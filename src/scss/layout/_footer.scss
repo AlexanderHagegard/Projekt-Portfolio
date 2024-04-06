@@ -1,0 +1,9 @@
+.site-footer {
+    padding: var(--section-padding) 32px var(--section-padding) 32px;
+    background-color: var(--color-blackish-blue);
+    color: var(--color-white);
+    
+    .hero__buttons {
+        display: inline-block;
+    }
+}

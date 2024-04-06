@@ -2,3 +2,17 @@
 @forward 'page';
 @forward 'single';
 @forward 'contact';
+
+
+.showcase {
+
+    p {
+        border-left-color: var(--color-black-50);
+    }
+}
+
+.stack,
+.projects {
+    background-color: var(--color-light-blue);
+    color: var(--color-white);
+}

@@ -1,0 +1,61 @@
+.hero {
+    &__content {
+        display: flex;
+        gap: 10rem;
+        justify-content: center;
+        align-items: center;
+        height: calc(100vh - 60%);
+    }
+
+    &__title {
+        background: linear-gradient(90deg, rgba(229,165,0,1) 0%, rgba(24,143,223,1) 80%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &__desc,
+    &__paragraph {
+        margin-bottom: var(--gap-content);
+    }
+
+    &__paragraph {
+        color: var(--color-white-50);
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        gap: var(--gap-content);
+    }
+
+    &__rightside {
+
+        img {
+            max-width: 375px;
+        }
+
+        .image__container {
+            position: relative;
+
+            .image__code,
+            .image__ux {
+                position: absolute;
+                padding: 45px;
+                border-radius: 100%;
+                background-color: var(--color-black-50);
+            }
+
+            .image__code {
+                top: -40px;
+                right: -30px;
+            }
+
+            .image__ux {
+                bottom: -40px;
+                left: -50px;
+            }
+        }
+        
+        
+    }
+}
