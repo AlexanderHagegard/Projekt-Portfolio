@@ -15,6 +15,7 @@
   --color-black: #222;
   --color-white-50: rgba(255 255 255 / 50%);
   --color-black-50: rgba(34 34 34 / 50%);
+  --color-blue-50: rgba(79 94 117 / 50%);
   --color-light-blue: #4F5E75;
   --color-dark-blue: #2E3142;
   --color-navy-blue: #011A39;
@@ -259,6 +260,9 @@ input[type=submit] {
   align-items: center;
   gap: var(--gap-content);
 }
+.hero__rightside {
+  padding-right: 32px;
+}
 .hero__rightside img {
   max-width: 375px;
 }
@@ -270,7 +274,7 @@ input[type=submit] {
   position: absolute;
   padding: 45px;
   border-radius: 100%;
-  background-color: var(--color-black-50);
+  background-color: var(--color-blue-50);
 }
 .hero__rightside .image__container .image__code {
   top: -40px;
@@ -279,6 +283,21 @@ input[type=submit] {
 .hero__rightside .image__container .image__ux {
   bottom: -40px;
   left: -50px;
+}
+.hero .v-icon {
+  display: flex;
+  justify-content: center;
+}
+.hero .v-icon {
+  animation: bounce 2s infinite;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
 }
 
 .showcase p {
