@@ -3,7 +3,7 @@
   --font-sans: "Inter", sans-serif;
   --font-size: 18px;
   --line-height: 1.6;
-  --font-scale: 1.333;
+  --font-scale: 1.25;
   --font-size-small: calc(var(--font-size-1) / var(--font-scale));
   --font-size-1: var(--font-size);
   --font-size-2: calc(var(--font-size-1) * var(--font-scale));
@@ -70,7 +70,7 @@ h1, h2, h3, h4, h5, h6, a {
 }
 
 h1 {
-  font-size: var(--font-size-6);
+  font-size: 76px;
 }
 
 h2 {
@@ -100,7 +100,8 @@ a {
   font-weight: 500;
 }
 
-p {
+p,
+h4 {
   font-family: "Inter", sans-serif;
   line-height: var(--line-height);
   margin: 0;
@@ -200,7 +201,7 @@ input[type=submit] {
 .hero,
 .showcase,
 .projects,
-.stack {
+.testemonials {
   display: grid;
   grid-template-columns: var(--grid-container);
   padding: var(--section-padding) 0;
@@ -209,8 +210,12 @@ input[type=submit] {
 .hero__inner,
 .showcase__inner,
 .projects__inner,
-.stack__inner {
+.testemonials__inner {
   grid-column: inner;
+}
+
+.section__header {
+  margin-bottom: var(--section-gap-inner);
 }
 
 .site-header__navigation {
@@ -302,8 +307,6 @@ input[type=submit] {
 
 .showcase p {
   border-left-color: var(--color-black-50);
-  margin-bottom: var(--section-gap-inner);
-  max-width: 1000px;
 }
 .showcase__cards {
   display: flex;
@@ -313,10 +316,23 @@ input[type=submit] {
   width: 700px;
 }
 
-.stack,
 .projects {
-  background-color: var(--color-light-blue);
+  background-color: var(--color-dark-blue);
   color: var(--color-white);
+}
+.projects .section__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.projects .swiper-slide__image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.projects .swiper-slide__description {
+  margin-top: var(--gap-large);
 }
 
 /*# sourceMappingURL=style.css.map */

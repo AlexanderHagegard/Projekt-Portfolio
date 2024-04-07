@@ -4,8 +4,7 @@
 
     p {
         border-left-color: var(--color-black-50);
-        margin-bottom: var(--section-gap-inner);
-        max-width: 1000px;
+        // max-width: 800px;
     }
 
     &__cards {
@@ -21,8 +20,28 @@
     }
 }
 
-.stack,
 .projects {
-    background-color: var(--color-light-blue);
+    background-color: var( --color-dark-blue);
     color: var(--color-white);
+
+    .section__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .swiper {
+        // --swiper-navigation-sides-offset: -40px;
+
+        &-slide__image {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &-slide__description {
+            margin-top: var(--gap-large);
+        }
+    }
 }

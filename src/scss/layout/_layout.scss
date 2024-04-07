@@ -1,7 +1,7 @@
 .hero,
 .showcase,
 .projects,
-.stack {
+.testemonials {
     display: grid;
     grid-template-columns: var(--grid-container);
     padding: var(--section-padding) 0;
@@ -10,6 +10,10 @@
 .hero__inner,
 .showcase__inner,
 .projects__inner,
-.stack__inner {
+.testemonials__inner {
     grid-column: inner;
+}
+
+.section__header {
+    margin-bottom: var(--section-gap-inner);
 }
