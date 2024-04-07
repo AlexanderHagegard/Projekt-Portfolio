@@ -9,7 +9,7 @@
 
     --font-size: 18px;
     --line-height: 1.6;
-    --font-scale: 1.25;
+    --font-scale: 1.333;
     
     --font-size-small: calc(var(--font-size-1) / var(--font-scale));
     --font-size-1: var(--font-size);
@@ -54,7 +54,7 @@
     // GAPS
 
     --section-gap: 5rem;
-    --section-gap-inner: 3.5rem;
+    --section-gap-inner: 4.5rem;
     --gap-content: 2rem;
     --gap-large: 1rem;
     --gap-small: 0.75rem;

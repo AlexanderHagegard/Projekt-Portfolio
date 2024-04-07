@@ -1,1 +1,28 @@
 @forward 'hero';
+
+.showcase {
+
+    p {
+        border-left-color: var(--color-black-50);
+        margin-bottom: var(--section-gap-inner);
+        max-width: 1000px;
+    }
+
+    &__cards {
+        display: flex;
+        gap: var(--gap-content);
+    }
+
+    .card {
+
+        &__image {
+            width: 700px;
+        }
+    }
+}
+
+.stack,
+.projects {
+    background-color: var(--color-light-blue);
+    color: var(--color-white);
+}

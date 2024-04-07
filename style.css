@@ -3,7 +3,7 @@
   --font-sans: "Inter", sans-serif;
   --font-size: 18px;
   --line-height: 1.6;
-  --font-scale: 1.25;
+  --font-scale: 1.333;
   --font-size-small: calc(var(--font-size-1) / var(--font-scale));
   --font-size-1: var(--font-size);
   --font-size-2: calc(var(--font-size-1) * var(--font-scale));
@@ -29,7 +29,7 @@
   --padding-content: 2rem;
   --section-padding: 9rem;
   --section-gap: 5rem;
-  --section-gap-inner: 3.5rem;
+  --section-gap-inner: 4.5rem;
   --gap-content: 2rem;
   --gap-large: 1rem;
   --gap-small: 0.75rem;
@@ -302,6 +302,15 @@ input[type=submit] {
 
 .showcase p {
   border-left-color: var(--color-black-50);
+  margin-bottom: var(--section-gap-inner);
+  max-width: 1000px;
+}
+.showcase__cards {
+  display: flex;
+  gap: var(--gap-content);
+}
+.showcase .card__image {
+  width: 700px;
 }
 
 .stack,
