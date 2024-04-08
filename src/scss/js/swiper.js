@@ -8,23 +8,23 @@ var swiper = new Swiper(".swiper", {
     },
 
     navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-arrow-next",
+        prevEl: ".swiper-arrow-prev",
     },
 
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 20,
-      },
-      640: {
-        slidesPerView: 2,
-        spaceBetween: 30,
-      },
-      1024: {
-        slidesPerView: 3,
-        spaceBetween: 30,
-      },
-    },
+    // breakpoints: {
+    //   320: {
+    //     slidesPerView: 1,
+    //     spaceBetween: 20,
+    //   },
+    //   640: {
+    //     slidesPerView: 2,
+    //     spaceBetween: 30,
+    //   },
+    //   1024: {
+    //     slidesPerView: 3,
+    //     spaceBetween: 30,
+    //   },
+    // },
   });
 

@@ -14,6 +14,10 @@
 
     &__item {
 
+        &--current {
+            font-weight: 900;
+        }
+
         &:hover,
         &--current {
             border-bottom: 2px solid var(--color-accent-orange);

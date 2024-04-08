@@ -63,7 +63,7 @@ img {
   height: auto;
 }
 
-h1, h2, h3, h4, h5, h6, a {
+h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-headings);
   margin: 0;
   padding: 0;
@@ -74,7 +74,11 @@ h1 {
 }
 
 h2 {
-  font-size: var(--font-size-5);
+  font-size: var(--font-size-6);
+  font-weight: 900;
+}
+
+:has(+ p) {
   margin-bottom: 1rem;
 }
 
@@ -95,9 +99,9 @@ h6 {
 }
 
 a {
+  font-size: 14px;
   color: var(--color-white);
   text-decoration: none;
-  font-weight: 500;
 }
 
 p,
@@ -190,7 +194,7 @@ input[type=submit] {
 }
 
 .site-footer {
-  padding: var(--section-padding) 32px var(--section-padding) 32px;
+  padding: var(--section-padding) 32px 32px 32px;
   background-color: var(--color-blackish-blue);
   color: var(--color-white);
 }
@@ -230,6 +234,9 @@ input[type=submit] {
   z-index: 99;
 }
 
+.menu__item--current {
+  font-weight: 900;
+}
 .menu__item:hover, .menu__item--current {
   border-bottom: 2px solid var(--color-accent-orange);
 }
@@ -307,6 +314,7 @@ input[type=submit] {
 
 .showcase p {
   border-left-color: var(--color-black-50);
+  max-width: 900px;
 }
 .showcase__cards {
   display: flex;
@@ -331,8 +339,53 @@ input[type=submit] {
   justify-content: center;
   align-items: center;
 }
+.projects .swiper-slide__link {
+  position: relative;
+}
 .projects .swiper-slide__description {
   margin-top: var(--gap-large);
+}
+.projects .swiper-arrow-prev, .projects .swiper-arrow-next {
+  position: absolute;
+  top: 40%;
+}
+.projects .swiper-arrow-next {
+  right: 0;
+}
+
+.site-footer {
+  margin-bottom: 0;
+}
+
+.site-footer__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.site-footer__inner .contact-info,
+.site-footer__inner .mail__link a,
+.site-footer__inner .phone,
+.site-footer__inner .hero__buttons {
+  font-size: 18px;
+  font-weight: 900;
+  margin-top: var(--gap-large);
+  text-align: center;
+}
+.site-footer__inner .contact-info__text,
+.site-footer__inner .mail__link a__text,
+.site-footer__inner .phone__text,
+.site-footer__inner .hero__buttons__text {
+  font-size: var(--font-size-4);
+  font-weight: 900;
+}
+.site-footer__inner .mail__link a {
+  text-decoration: underline;
+}
+.site-footer__inner .copyright {
+  font-size: 12px;
+  margin-top: 8rem;
+  color: var(--color-white-50);
 }
 
 /*# sourceMappingURL=style.css.map */

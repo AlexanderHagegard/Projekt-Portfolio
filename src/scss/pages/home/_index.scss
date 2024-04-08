@@ -1,10 +1,12 @@
 @forward 'hero';
 
+// Showcase
+
 .showcase {
 
     p {
         border-left-color: var(--color-black-50);
-        // max-width: 800px;
+        max-width: 900px;
     }
 
     &__cards {
@@ -20,6 +22,8 @@
     }
 }
 
+// Projects 
+
 .projects {
     background-color: var( --color-dark-blue);
     color: var(--color-white);
@@ -31,17 +35,75 @@
     }
 
     .swiper {
-        // --swiper-navigation-sides-offset: -40px;
-
+        
         &-slide__image {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            
+            img {
+                // width: 100vw;
+            }
+        }
+        
+        &-slide__link {
+            position: relative;
         }
 
         &-slide__description {
             margin-top: var(--gap-large);
         }
+
+        &-arrow-prev,
+        &-arrow-next {
+            position: absolute;
+            top: 40%;
+        }
+
+        &-arrow-next {
+            right: 0;
+        }
+    }
+}
+
+// Clients
+
+
+// Footer
+
+.site-footer {
+    margin-bottom: 0;
+}
+
+.site-footer__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .contact-info,
+    .mail__link a,
+    .phone,
+    .hero__buttons {
+        font-size: 18px;
+        font-weight: 900;
+        margin-top: var(--gap-large);
+        text-align: center;
+
+        &__text {
+            font-size: var(--font-size-4);
+            font-weight: 900;
+        }
+    }
+
+    .mail__link a{
+        text-decoration: underline;
+    }
+
+    .copyright {
+        font-size: 12px;
+        margin-top: 8rem;
+        color: var(--color-white-50);
     }
 }
