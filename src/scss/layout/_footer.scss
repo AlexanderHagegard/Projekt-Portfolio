@@ -3,7 +3,38 @@
     background-color: var(--color-blackish-blue);
     color: var(--color-white);
     
-    .hero__buttons {
-        display: inline-block;
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        .contact-info,
+        .mail__link a,
+        .phone,
+        .hero__buttons {
+            font-size: 18px;
+            font-weight: 900;
+            margin-top: var(--gap-large);
+            text-align: center;
+            
+            &__text {
+                font-size: var(--font-size-4);
+                font-weight: 900;
+            }
+        }
+        
+        .hero__buttons {
+            display: inline-block;
+        }
+        .mail__link a{
+            text-decoration: underline;
+        }
+    
+        .copyright {
+            font-size: 12px;
+            margin-top: var(--section-padding);
+            color: var(--color-white-50);
+        }
     }
 }

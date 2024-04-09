@@ -27,14 +27,15 @@
 .projects {
     background-color: var( --color-dark-blue);
     color: var(--color-white);
-
+    
     .section__header {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-
+    
     .swiper {
+        position: relative;
         
         &-slide__image {
             display: flex;
@@ -43,12 +44,11 @@
             align-items: center;
             
             img {
-                // width: 100vw;
+                width: 100vw;
             }
         }
         
         &-slide__link {
-            position: relative;
         }
 
         &-slide__description {
@@ -58,10 +58,13 @@
         &-arrow-prev,
         &-arrow-next {
             position: absolute;
-            top: 40%;
+            top: 45%;
+            z-index: 50;
+            left: 0;
         }
 
         &-arrow-next {
+            left: auto;
             right: 0;
         }
     }
@@ -69,41 +72,3 @@
 
 // Clients
 
-
-// Footer
-
-.site-footer {
-    margin-bottom: 0;
-}
-
-.site-footer__inner {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    .contact-info,
-    .mail__link a,
-    .phone,
-    .hero__buttons {
-        font-size: 18px;
-        font-weight: 900;
-        margin-top: var(--gap-large);
-        text-align: center;
-
-        &__text {
-            font-size: var(--font-size-4);
-            font-weight: 900;
-        }
-    }
-
-    .mail__link a{
-        text-decoration: underline;
-    }
-
-    .copyright {
-        font-size: 12px;
-        margin-top: 8rem;
-        color: var(--color-white-50);
-    }
-}
