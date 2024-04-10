@@ -1,5 +1,11 @@
 .site-header {
-    background-color: var(--color-blackish-blue);
     color: var(--color-white);
-    height: 100vh;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    
+    &--scroll {
+        background-color: var(--color-blackish-blue);
+    }
 }
+

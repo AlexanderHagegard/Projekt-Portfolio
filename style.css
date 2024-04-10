@@ -1,8 +1,8 @@
 :root {
-  --font-headings: "Futura-PT", sans-serif;
+  --font-headings: "futura-pt-bold", sans-serif;
   --font-sans: "Inter", sans-serif;
-  --font-size: 18px;
-  --line-height: 1.6;
+  --font-size: 16px;
+  --line-height: 1.5;
   --font-scale: 1.25;
   --font-size-small: calc(var(--font-size-1) / var(--font-scale));
   --font-size-1: var(--font-size);
@@ -65,16 +65,17 @@ img {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-headings);
+  font-weight: 400;
   margin: 0;
   padding: 0;
 }
 
 h1 {
-  font-size: 76px;
+  font-size: 70px;
 }
 
 h2 {
-  font-size: var(--font-size-6);
+  font-size: var(--font-size-5);
   font-weight: 900;
 }
 
@@ -188,9 +189,13 @@ input[type=submit] {
 }
 
 .site-header {
-  background-color: var(--color-blackish-blue);
   color: var(--color-white);
-  height: 100vh;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+.site-header--scroll {
+  background-color: var(--color-blackish-blue);
 }
 
 .site-footer {
@@ -253,7 +258,6 @@ input[type=submit] {
 }
 
 .site-header__navigation {
-  background-color: var(--color-blackish-blue);
   position: fixed;
   display: flex;
   justify-content: space-between;
@@ -280,16 +284,18 @@ input[type=submit] {
   align-items: center;
 }
 
-.site-header__scroll {
-  display: none;
+.hero {
+  min-height: 100vh;
+  background-image: url(/src/scss/assets/images/hero-bg.jpg);
+  background-size: cover;
+  position: relative;
 }
-
 .hero__content {
   display: flex;
-  gap: 10rem;
+  gap: 4rem;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 60%);
+  height: calc(100vh - 50%);
 }
 .hero__title {
   background: linear-gradient(90deg, rgb(229, 165, 0) 0%, rgb(24, 143, 223) 80%);
@@ -297,6 +303,7 @@ input[type=submit] {
   -webkit-text-fill-color: transparent;
 }
 .hero__desc, .hero__paragraph {
+  color: var(--color-white);
   margin-bottom: var(--gap-content);
 }
 .hero__paragraph {
@@ -334,22 +341,26 @@ input[type=submit] {
 .hero .v-icon {
   display: flex;
   justify-content: center;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 .hero .v-icon {
   animation: bounce 2s infinite;
 }
 @keyframes bounce {
   0% {
-    transform: translateY(0px);
+    transform: translate(-50%, 0);
   }
   60% {
-    transform: translateY(-10px);
+    transform: translate(-50%, -10px);
   }
 }
 
 .showcase p {
   border-left-color: var(--color-black-50);
-  max-width: 900px;
+  max-width: 750px;
 }
 .showcase__cards {
   display: flex;
@@ -362,6 +373,9 @@ input[type=submit] {
 .projects {
   background-color: var(--color-dark-blue);
   color: var(--color-white);
+}
+.projects__inner {
+  position: relative;
 }
 .projects .section__header {
   display: flex;
@@ -383,15 +397,44 @@ input[type=submit] {
 .projects .swiper-slide__description {
   margin-top: var(--gap-large);
 }
+.projects .swiper-slide__description .card__title {
+  font-weight: 700;
+}
 .projects .swiper-arrow-prev, .projects .swiper-arrow-next {
   position: absolute;
-  top: 45%;
+  top: 50%;
   z-index: 50;
-  left: 0;
+  left: -60px;
 }
 .projects .swiper-arrow-next {
   left: auto;
-  right: 0;
+  right: -60px;
+}
+
+.client {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--section-gap);
+}
+.client__paragraph {
+  max-width: 30rem;
+  font-style: italic;
+  line-height: var(--line-height);
+  margin-bottom: var(--gap-large);
+}
+.client__container {
+  border-left: 2px solid var(--color-black-50);
+}
+.client__name {
+  font-weight: 700;
+}
+.client__title {
+  font-size: var(--font-size-small);
+}
+.client img {
+  display: flex;
+  height: 155px;
 }
 
 /*# sourceMappingURL=style.css.map */

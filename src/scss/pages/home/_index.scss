@@ -6,7 +6,7 @@
 
     p {
         border-left-color: var(--color-black-50);
-        max-width: 900px;
+        max-width: 750px;
     }
 
     &__cards {
@@ -27,6 +27,10 @@
 .projects {
     background-color: var( --color-dark-blue);
     color: var(--color-white);
+
+    &__inner {
+        position: relative;
+    }
     
     .section__header {
         display: flex;
@@ -48,27 +52,58 @@
             }
         }
         
-        &-slide__link {
-        }
-
         &-slide__description {
             margin-top: var(--gap-large);
+
+            .card__title {
+                font-weight: 700;
+            }
         }
 
         &-arrow-prev,
         &-arrow-next {
             position: absolute;
-            top: 45%;
+            top: 50%;
             z-index: 50;
-            left: 0;
+            left: -60px;
         }
 
         &-arrow-next {
             left: auto;
-            right: 0;
+            right: -60px;
         }
     }
 }
 
 // Clients
 
+.client {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--section-gap);
+
+    &__paragraph {
+        max-width: 30rem;
+        font-style: italic;
+        line-height: var(--line-height);  
+        margin-bottom: var(--gap-large);
+    }
+
+    &__container {
+        border-left: 2px solid var(--color-black-50);
+    }
+
+    &__name {
+        font-weight: 700;
+    }
+
+    &__title {
+        font-size: var(--font-size-small);
+    }
+
+    img {
+        display: flex;
+        height: 155px;
+    }
+}
