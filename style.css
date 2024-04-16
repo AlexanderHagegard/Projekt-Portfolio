@@ -416,6 +416,7 @@ input[type=submit] {
   justify-content: center;
   align-items: center;
   gap: var(--section-gap);
+  margin-bottom: var(--section-gap);
 }
 .client__paragraph {
   max-width: 30rem;

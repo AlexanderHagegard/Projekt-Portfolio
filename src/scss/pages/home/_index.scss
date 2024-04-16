@@ -82,6 +82,7 @@
     justify-content: center;
     align-items: center;
     gap: var(--section-gap);
+    margin-bottom: var(--section-gap);
 
     &__paragraph {
         max-width: 30rem;
