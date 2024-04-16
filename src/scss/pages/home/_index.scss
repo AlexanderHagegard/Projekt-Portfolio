@@ -1,4 +1,5 @@
 @forward 'hero';
+@use '../../utilities/responsive';
 
 // Showcase
 
@@ -106,5 +107,39 @@
     img {
         display: flex;
         height: 155px;
+    }
+}
+
+@include responsive.max(1024px) {
+
+    .showcase__cards {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@include responsive.max(800px) {
+
+    .client__paragraph {
+        max-width: 20rem;
+    }
+}
+
+@include responsive.max(700px) {
+
+    .client {
+        gap: 2rem;
+    }
+
+    .client__paragraph {
+        max-width: 17rem;
+    }
+}
+
+@include responsive.max(550px) {
+
+    .client__paragraph {
+        max-width: 15rem;
     }
 }

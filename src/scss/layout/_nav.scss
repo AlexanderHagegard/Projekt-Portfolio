@@ -1,3 +1,5 @@
+@use '../utilities/responsive';
+
 .site-header__navigation {
     position: fixed;
     display: flex;
@@ -36,5 +38,58 @@
     }
 }
 
-.site-header__scroll {
+.menu-button {
+    display: none;
+}
+
+
+.device-menu {
+display: none;
+}
+
+.device-menu {
+    position: fixed;
+    background-color: var(--color-blackish-blue);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 98;
+    display: none;
+}
+
+.device-menu .menu__list {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding-bottom: 3rem;
+}
+
+.device-menu .menu__link {
+    font-size: var(--font-size-2);
+}
+
+.device-menu.open {
+    display: flex;
+}
+
+// Responsive
+
+@include responsive.max(1024px) {
+
+    .menu__container {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+        border: none;
+        background: none;
+        z-index: 99;
+        cursor: pointer;
+    }
+
 }
