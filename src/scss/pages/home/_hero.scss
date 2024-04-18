@@ -5,6 +5,7 @@
     background-image: url(/src/scss/assets/images/hero-bg.jpg);
     background-size: cover;
     position: relative;
+    padding-top: 9rem;
 
     &__content {
         display: flex;
@@ -37,7 +38,6 @@
     }
     
     &__rightside {
-        padding-right: 32px;
 
         img {
             max-width: 375px;
@@ -56,12 +56,12 @@
             
             .image__code {
                 top: -40px;
-                right: -30px;
+                right: -20px;
             }
             
             .image__ux {
                 bottom: -40px;
-                left: -50px;
+                left: -30px;
             }
         } 
     }
@@ -70,7 +70,7 @@
         display: flex;
         justify-content: center;
         position: absolute;
-        bottom: 50px;
+        bottom: 30px;
         left: 50%;
         transform: translate(-50%, 0);
         
@@ -110,12 +110,24 @@
         .hero__desc {
             font-size: 30px;
         }
+    }
 
     @include responsive.max(700px) {
         .hero__title {
-            font-size: 50px;
-            margin-bottom: 1rem;
+            line-height: 1;
+            padding-bottom: 2rem;
+        }
+
+        .hero__desc {
+            font-size: 25px;
         }
     }
-
-}
+    
+    @include responsive.max(550px) {
+        
+        .hero__rightside {
+            img {
+                width: 300px;
+            }
+        }
+    }

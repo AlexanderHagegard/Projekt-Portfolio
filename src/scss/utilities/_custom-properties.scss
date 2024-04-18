@@ -1,3 +1,5 @@
+@use 'responsive';
+
 :root {
 
     // FONTS
@@ -68,5 +70,7 @@
     // GRID-CONTAINER
     
     --grid-container: [full-start] minmax(32px, 1fr) [inner-start] minmax(0, var(--inner-width)) [inner-end] minmax(32px, 1fr) [full-end]; 
-
+    @include responsive.max(600px) {
+        --section-padding: 6rem;
+    }
 }

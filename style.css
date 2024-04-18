@@ -38,6 +38,11 @@
   --inner-width: 75rem;
   --grid-container: [full-start] minmax(32px, 1fr) [inner-start] minmax(0, var(--inner-width)) [inner-end] minmax(32px, 1fr) [full-end];
 }
+@media screen and (max-width: 600px) {
+  :root {
+    --section-padding: 6rem;
+  }
+}
 
 html, body {
   font-family: var(--font-sans);
@@ -338,6 +343,7 @@ input[type=submit] {
   background-image: url(/src/scss/assets/images/hero-bg.jpg);
   background-size: cover;
   position: relative;
+  padding-top: 9rem;
 }
 .hero__content {
   display: flex;
@@ -363,9 +369,6 @@ input[type=submit] {
   align-items: center;
   gap: var(--gap-content);
 }
-.hero__rightside {
-  padding-right: 32px;
-}
 .hero__rightside img {
   max-width: 375px;
 }
@@ -381,17 +384,17 @@ input[type=submit] {
 }
 .hero__rightside .image__container .image__code {
   top: -40px;
-  right: -30px;
+  right: -20px;
 }
 .hero__rightside .image__container .image__ux {
   bottom: -40px;
-  left: -50px;
+  left: -30px;
 }
 .hero .v-icon {
   display: flex;
   justify-content: center;
   position: absolute;
-  bottom: 50px;
+  bottom: 30px;
   left: 50%;
   transform: translate(-50%, 0);
 }
@@ -423,12 +426,24 @@ input[type=submit] {
     font-size: 30px;
   }
 }
-@media screen and (max-width: 800px) and (max-width: 700px) {
+@media screen and (max-width: 700px) {
   .hero__title {
-    font-size: 50px;
-    margin-bottom: 1rem;
+    line-height: 1;
+    padding-bottom: 2rem;
+  }
+  .hero__desc {
+    font-size: 25px;
   }
 }
+@media screen and (max-width: 550px) {
+  .hero__rightside img {
+    width: 300px;
+  }
+}
+.container {
+  overflow: hidden;
+}
+
 .showcase p {
   border-left-color: var(--color-black-50);
   max-width: 750px;
@@ -437,13 +452,12 @@ input[type=submit] {
   display: flex;
   gap: var(--gap-content);
 }
-.showcase .card__image {
-  width: 700px;
-}
 
 .projects {
   background-color: var(--color-dark-blue);
   color: var(--color-white);
+  overflow: hidden;
+  padding: var(--section-padding) 0 9rem;
 }
 .projects__inner {
   position: relative;
@@ -452,6 +466,10 @@ input[type=submit] {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem 6rem;
+}
+.projects .section__header h2 {
+  white-space: nowrap;
 }
 .projects .swiper {
   position: relative;
@@ -475,11 +493,18 @@ input[type=submit] {
   position: absolute;
   top: 50%;
   z-index: 50;
-  left: -60px;
+  transform: translateX(-50%);
+  left: 0;
 }
 .projects .swiper-arrow-next {
   left: auto;
-  right: -60px;
+  transform: translateX(50%);
+  right: 0;
+}
+
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+  position: absolute;
+  bottom: -50px;
 }
 
 .client {
@@ -489,24 +514,35 @@ input[type=submit] {
   gap: var(--section-gap);
   margin-bottom: var(--section-gap);
 }
+.client:last-of-type {
+  margin-bottom: 0;
+}
 .client__paragraph {
   max-width: 30rem;
   font-style: italic;
   line-height: var(--line-height);
   margin-bottom: var(--gap-large);
 }
+.client__flex {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
 .client__container {
   border-left: 2px solid var(--color-black-50);
 }
-.client__name {
+.client__container .client__name {
   font-weight: 700;
-}
-.client__title {
   font-size: var(--font-size-small);
 }
-.client img {
+.client__container .client__title {
+  font-size: var(--font-size-small);
+}
+.client__container img {
   display: flex;
-  height: 155px;
+}
+.client .client__image--small img {
+  display: none;
 }
 
 @media screen and (max-width: 1024px) {
@@ -515,23 +551,26 @@ input[type=submit] {
     justify-content: center;
     align-items: center;
   }
-}
-@media screen and (max-width: 800px) {
-  .client__paragraph {
-    max-width: 20rem;
+  .swiper-arrow-prev,
+  .swiper-arrow-next {
+    display: none;
   }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
   .client {
-    gap: 2rem;
-  }
-  .client__paragraph {
-    max-width: 17rem;
+    margin-bottom: 3rem;
   }
 }
 @media screen and (max-width: 550px) {
-  .client__paragraph {
-    max-width: 15rem;
+  .client__image {
+    display: none;
+  }
+  .client .client__image--small img {
+    display: block;
+    max-width: 60px;
+  }
+  .projects .section__header {
+    flex-wrap: wrap;
   }
 }
 

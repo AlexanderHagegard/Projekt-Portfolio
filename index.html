@@ -300,10 +300,10 @@
                 <a href="" class="button">
                     <div class="button__container">
                         <div class="button__text">
-                            <span>View all projects</span>
+                            <span>All projects</span>
                         </div>
                         <div class="arrow-icon">
-                            <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="16" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M18.0997 7.99998L1 7.99998M12.3998 14.5142L18.914 7.99998L12.3998 1.48579" stroke="white" stroke-width="1.42414" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </div>
@@ -343,22 +343,40 @@
                     </div>
                 </div>
 
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <div class="swiper-slide__image">
+                        <a href="" class="swiper-slide__link">
+                            <img src="/src/scss/assets/images/EcoShades.jpg" alt="" class="card__image">
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide__description">
+                        <h4 class="card__title">EcoShades</h4>
+                        <p class="card__paragraph">Website & Graphic Profile</p>
+                    </div>
+                </div>
+
             </div>
             
         </div>
-            
-            <!-- Nav buttons -->
-            <div class="swiper-arrow-prev">
-                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15 -5.36383e-07C23.2843 -4.37594e-07 30 6.71573 30 15C30 23.2843 23.2843 30 15 30C6.71573 30 8.00843e-08 23.2843 1.78873e-07 15C2.77662e-07 6.71573 6.71573 -6.35171e-07 15 -5.36383e-07ZM6.92035 13.2764L6.92035 13.1973L21.8859 6.58537L21.8859 10.3333L11.0481 15.0869L21.8859 19.8406L21.8859 23.5885L6.92032 16.9766L6.92035 13.2764Z" fill="white"/>
-                </svg>                    
-            </div>
-            
-            <div class="swiper-arrow-next">
-                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15 30C6.71573 30 2.77662e-07 23.2843 1.78873e-07 15C8.00843e-08 6.71573 6.71573 2.77662e-07 15 1.78873e-07C23.2843 8.00843e-08 30 6.71573 30 15C30 23.2843 23.2843 30 15 30ZM23.0797 16.7236L23.0797 16.8027L8.11409 23.4146L8.11409 19.6667L18.9519 14.9131L8.11412 10.1594L8.11412 6.41148L23.0797 13.0234L23.0797 16.7236Z" fill="white"/>
-                </svg>    
-            </div>
+
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- Nav buttons -->
+        <div class="swiper-arrow-prev">
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M15 -5.36383e-07C23.2843 -4.37594e-07 30 6.71573 30 15C30 23.2843 23.2843 30 15 30C6.71573 30 8.00843e-08 23.2843 1.78873e-07 15C2.77662e-07 6.71573 6.71573 -6.35171e-07 15 -5.36383e-07ZM6.92035 13.2764L6.92035 13.1973L21.8859 6.58537L21.8859 10.3333L11.0481 15.0869L21.8859 19.8406L21.8859 23.5885L6.92032 16.9766L6.92035 13.2764Z" fill="white"/>
+            </svg>                    
+        </div>
+        
+        <div class="swiper-arrow-next">
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M15 30C6.71573 30 2.77662e-07 23.2843 1.78873e-07 15C8.00843e-08 6.71573 6.71573 2.77662e-07 15 1.78873e-07C23.2843 8.00843e-08 30 6.71573 30 15C30 23.2843 23.2843 30 15 30ZM23.0797 16.7236L23.0797 16.8027L8.11409 23.4146L8.11409 19.6667L18.9519 14.9131L8.11412 10.1594L8.11412 6.41148L23.0797 13.0234L23.0797 16.7236Z" fill="white"/>
+            </svg>    
+        </div>
+
     </div>
 </section>
 
@@ -376,9 +394,14 @@
                 <div class="client__desc">
                     <div class="client__paragraph">"We had the pleasure of working with Alexander to create our company's website and graphic profile, and we couldn't be happier with the results. From the outset, Alexander impressed us with his creativity, and technical expertise."</div>
 
-                    <div class="client__container">
-                        <p class="client__name">Gustaf</p>
-                        <p class="client__title">Founder EcoShades</p>
+                    <div class="client__flex">
+                        <div class="client__container">
+                            <p class="client__name">Gustaf</p>
+                            <p class="client__title">Founder EcoShades</p>
+                        </div>
+                        <div class="client__image--small">
+                            <img src="/src/scss/assets/images/gustav.jpg" alt="">
+                        </div>
                     </div>
                 </div>
     
@@ -392,9 +415,14 @@
                 <div class="client__desc">
                     <div class="client__paragraph">"Collaborating with Alexander was a pleasure. His ability to turn our ideas into reality was truly impressive."</div>
 
-                    <div class="client__container">
-                        <p class="client__name">Peter</p>
-                        <p class="client__title">Owner GrävXpert</p>
+                    <div class="client__flex">
+                        <div class="client__container">
+                            <p class="client__name">Peter</p>
+                            <p class="client__title">Owner GrävXpert</p>
+                        </div>
+                        <div class="client__image--small">
+                            <img src="/src/scss/assets/images/gustav.jpg" alt="">
+                        </div>
                     </div>
                 </div>
     
@@ -408,9 +436,14 @@
                 <div class="client__desc">
                     <div class="client__paragraph">"Working with Alexander was a pleasure; his creativity and technical expertise exceeded our expectations. Thanks to him, our website and graphic profile truly represent our brand."</div>
 
-                    <div class="client__container">
-                        <p class="client__name">Björn</p>
-                        <p class="client__title">CEO Realibear</p>
+                    <div class="client__flex">
+                        <div class="client__container">
+                            <p class="client__name">Björn</p>
+                            <p class="client__title">CEO Novum Logistics</p>
+                        </div>
+                        <div class="client__image--small">
+                            <img src="/src/scss/assets/images/gustav.jpg" alt="">
+                        </div>
                     </div>
                 </div>
     
