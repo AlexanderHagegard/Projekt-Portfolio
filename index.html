@@ -15,6 +15,7 @@
 
     <!-- CSS styles -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <!-- Swiper JS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
@@ -256,7 +257,7 @@
 
 <!-- Showcase section -->
 <section class="showcase">
-    <div class="showcase__inner">
+    <div data-aos="fade-up" data-aos-offset="100" class="showcase__inner">
 
         <!-- Section header -->
         <header class="section__header">
@@ -268,12 +269,12 @@
             </p>
         </header>
 
-        <div class="showcase__cards">
+        <div data-aos="fade-up" data-aos-delay="200" class="showcase__cards">
 
             <!-- Card 1 -->
             <div class="card">
                 <a href="" class="card__link">
-                    <img src="/src/scss/assets/images/bulls.jpg" alt="" class="card__image">
+                    <img src="/src/scss/assets/images/screens.jpg" alt="" class="card__image">
                 </a>
             </div>
 
@@ -290,7 +291,7 @@
 
 <!-- Projects section -->
 <section class="projects">
-    <div class="projects__inner">
+    <div data-aos="fade-up" data-aos-offset="100" class="projects__inner">
 
         <!-- Section header -->
         <header class="section__header">
@@ -312,14 +313,14 @@
         </header>
 
         <!-- Projects Swiper -->
-        <div class="swiper">
+        <div data-aos="fade-up" data-aos-delay="200" class="swiper">
             <div class="swiper-wrapper">
 
                 <!-- Slide 1 -->
                 <div class="swiper-slide">
                     <div class="swiper-slide__image">
                         <a href="" class="swiper-slide__link">
-                            <img src="/src/scss/assets/images/EcoShades.jpg" alt="" class="card__image">
+                            <img src="/src/scss/assets/images/ecoshades.jpg" alt="" class="card__image">
                         </a>
                     </div>
 
@@ -329,30 +330,30 @@
                     </div>
                 </div>
 
-                <!-- Slide 1 -->
+                <!-- Slide 2 -->
                 <div class="swiper-slide">
                     <div class="swiper-slide__image">
                         <a href="" class="swiper-slide__link">
-                            <img src="/src/scss/assets/images/EcoShades.jpg" alt="" class="card__image">
+                            <img src="/src/scss/assets/images/gravxpert.jpg" alt="" class="card__image">
                         </a>
                     </div>
 
                     <div class="swiper-slide__description">
-                        <h4 class="card__title">EcoShades</h4>
+                        <h4 class="card__title">GrävXpert</h4>
                         <p class="card__paragraph">Website & Graphic Profile</p>
                     </div>
                 </div>
 
-                <!-- Slide 1 -->
+                <!-- Slide 3 -->
                 <div class="swiper-slide">
                     <div class="swiper-slide__image">
                         <a href="" class="swiper-slide__link">
-                            <img src="/src/scss/assets/images/EcoShades.jpg" alt="" class="card__image">
+                            <img src="/src/scss/assets/images/novum.jpg" alt="" class="card__image">
                         </a>
                     </div>
 
                     <div class="swiper-slide__description">
-                        <h4 class="card__title">EcoShades</h4>
+                        <h4 class="card__title">Novum Logistics</h4>
                         <p class="card__paragraph">Website & Graphic Profile</p>
                     </div>
                 </div>
@@ -382,12 +383,14 @@
 
 <!-- Testemonials section -->
 <section class="testemonials">
-    <div class="testemonials__inner">
+    <div data-aos="fade-up" data-aos-offset="100" class="testemonials__inner">
 
         <!-- Section header -->
         <header class="section__header">
             <h2 class="section__header__title">Happy Clients<span class="dot">.</span></h2>
         </header>
+
+        <div data-aos="fade-up" data-aos-delay="200" class="clients">
 
             <!-- Client 1 -->
             <div class="client">
@@ -421,13 +424,13 @@
                             <p class="client__title">Owner GrävXpert</p>
                         </div>
                         <div class="client__image--small">
-                            <img src="/src/scss/assets/images/gustav.jpg" alt="">
+                            <img src="/src/scss/assets/images/peter.jpg" alt="">
                         </div>
                     </div>
                 </div>
     
                 <div class="client__image">
-                        <img src="/src/scss/assets/images/gustav.jpg" alt="" class="client__image">
+                        <img src="/src/scss/assets/images/peter.jpg" alt="" class="client__image">
                 </div>
             </div>
 
@@ -442,15 +445,17 @@
                             <p class="client__title">CEO Novum Logistics</p>
                         </div>
                         <div class="client__image--small">
-                            <img src="/src/scss/assets/images/gustav.jpg" alt="">
+                            <img src="/src/scss/assets/images/bjorn.jpg" alt="">
                         </div>
                     </div>
                 </div>
     
                 <div class="client__image">
-                        <img src="/src/scss/assets/images/gustav.jpg" alt="" class="client__image">
+                        <img src="/src/scss/assets/images/bjorn.jpg" alt="" class="client__image">
                 </div>
             </div>
+                    
+        </div>
 
     </div>
 </section>
@@ -539,5 +544,11 @@
     </div>
 </footer>
 </div>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+        once: true
+    });
+  </script>
 </body>
 </html>
